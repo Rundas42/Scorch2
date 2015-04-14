@@ -1,15 +1,16 @@
-﻿#pragma strict
+﻿/*#pragma strict
 
-private var gunData : GunData;
+var gunData : GunData;
 
-function OnCollisionEnter(coll : Collision){
+function OnCollisionEnter(coll : Collision)
+{
 
 	var otherObj = coll.gameObject;
 	Debug.Log(otherObj.tag);
 	Debug.Log(gunData.currentWeapon.Damage);
 	
 	if(otherObj.CompareTag("Enemy")){
-		var enemyData = otherObj.GetComponent.<EnemyData>();
+		var enemyData = otherObj.GetComponent(EnemyData);
 		enemyData.health -= gunData.currentWeapon.Damage;
 		Debug.Log(enemyData.health);
 	}
@@ -23,10 +24,4 @@ function Awake(){
 	gunData = player.transform.GetComponentInChildren(GunData);
 }
 
-function Start () {
-
-}
-
-function Update () {
-
-}
+*/

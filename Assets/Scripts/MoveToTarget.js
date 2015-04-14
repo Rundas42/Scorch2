@@ -9,7 +9,7 @@ function  Awake(){
 }
 
 function Start () {
-
+	goal = GameObject.FindGameObjectWithTag("Player");
 }
 
 function FixedUpdate () {

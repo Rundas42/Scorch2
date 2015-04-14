@@ -1,4 +1,4 @@
-﻿#pragma strict
+﻿/*#pragma strict
 
 public var type : Gun;
 
@@ -13,7 +13,10 @@ function OnTriggerEnter(other : Collider){
 		other.GetComponentInChildren(GunData).weaponLifetime = type.lifetime;
 		Destroy(this.gameObject);
 	}
-}
+<<<<<<< HEAD
+}*/
+//=======
+//}
 
     function Start () {
         
@@ -26,3 +29,4 @@ function OnTriggerEnter(other : Collider){
 function Update () {
 
 }
+///>>>>>>> Garretthogan/master

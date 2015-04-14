@@ -6,7 +6,7 @@ public class WeaponText : MonoBehaviour
 
     enum WeaponType { PISTOL = 0, RIFLE = 1, SMG = 2, LAUNCHER = 3 }  
 	string currentWeapon;
-    //bool hasCollided;
+   // bool hasCollided;
 
 	void Start () 
 	{

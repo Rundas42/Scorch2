@@ -5,7 +5,8 @@ public class WeaponText : MonoBehaviour
 {
 
     enum WeaponType { PISTOL = 0, RIFLE = 1, SMG = 2, LAUNCHER = 3 }  
-	int currentWeapon;
+	string currentWeapon;
+    //bool hasCollided;
 
 	void Start () 
 	{
@@ -19,7 +20,25 @@ public class WeaponText : MonoBehaviour
 
 	void OnGUI()
 	{
-		GUI.TextField(new Rect (10,30,200, 20), "Current weapon: ");
+       // if (hasCollided == true)
+        
+
+            if (gameObject.tag == "SMG")
+            {
+                currentWeapon = "SMG";
+            }
+
+            if (gameObject.tag == "Launcher")
+            {
+                currentWeapon = "Launcer";
+            }
+
+            else
+            {
+                currentWeapon = "Pistol";
+            }
+        
+		GUI.TextField(new Rect (10,30,200, 20), "Current weapon: " + currentWeapon);
 
     }
 

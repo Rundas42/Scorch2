@@ -4,9 +4,8 @@ using System.Collections;
 public class WeaponText : MonoBehaviour 
 {
 
-    enum WeaponType { PISTOL = 0, RIFLE = 1, SMG = 2, LAUNCHER = 3 }  
 	string currentWeapon;
-   // bool hasCollided;
+    bool hasCollided;
 
 	void Start () 
 	{
@@ -15,14 +14,23 @@ public class WeaponText : MonoBehaviour
 
 	void Update () 
 	{
-        OnGUI();
+      //  OnGUI();
 	}
+
+    /*void onTriggerEnter(Collider Launcher)
+    {
+        if (Launcher.gameObject.tag == "Launcher")
+        {
+            hasCollided = true;
+        }
+
+    }
+   */
 
 	void OnGUI()
 	{
-       // if (hasCollided == true)
-        
 
+        
             if (gameObject.tag == "SMG")
             {
                 currentWeapon = "SMG";
@@ -30,7 +38,7 @@ public class WeaponText : MonoBehaviour
 
             if (gameObject.tag == "Launcher")
             {
-                currentWeapon = "Launcer";
+                currentWeapon = "Launcher";
             }
 
             else
@@ -38,10 +46,12 @@ public class WeaponText : MonoBehaviour
                 currentWeapon = "Pistol";
             }
         
+        
 		GUI.TextField(new Rect (10,30,200, 20), "Current weapon: " + currentWeapon);
 
-    }
-
-
-
+    
 }
+}
+
+
+

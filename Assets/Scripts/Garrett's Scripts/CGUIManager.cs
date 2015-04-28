@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum GameState { eMainMenu, ePlaying, ePause}
+
 public class CGUIManager : MonoBehaviour {
 
     private static CGUIManager instance;
@@ -12,11 +14,33 @@ public class CGUIManager : MonoBehaviour {
         {
             if(instance == null)
             {
-                instance = new CGUIManager();
+                instance = GameObject.FindObjectOfType<CGUIManager>();
+                DontDestroyOnLoad(instance);
             }
             return instance;
         }
     }
+
+    public void ChangeLevel(string level)
+    {
+        Application.LoadLevel(level);
+    }
+
+    void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+
+        else
+        {
+            if (this != instance)
+                Destroy(this);
+        }
+    }
+
 	// Use this for initialization
 	void Start () {
 	

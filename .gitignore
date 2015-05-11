@@ -62,3 +62,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+<<<<<<< HEAD
+=======
+Assets/L_FG_Assets_Pack_Lite/Mobile/Materials.meta
+Assets/L_FG_Assets_Pack_Lite/Mobile/Meshes.meta
+>>>>>>> origin/FireBranch
+*.meta

@@ -1,0 +1,15 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch Garretthogan/master
+# Your branch and 'remotes/Garretthogan/master' have diverged,
+# and have 1 and 3 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# Changes to be committed:
+#	new file:   .~lock.jf1gj0ul.gxy.txt#
+#	new file:   Builds/BuildOne/BuildOne_Data/output_log.txt
+#	new file:   jf1gj0ul.gxy.txt
+# FUCK THIS NOISE
+
+

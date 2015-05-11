@@ -6,7 +6,7 @@ private var num : int;
 num = Random.Range(1,4);
 
 function LoadFirstLevel() {
-	Application.LoadLevel(Random.Range(num,Application.levelCount -1));
+	Application.LoadLevel("Prototype");
 }
 function ExitGame() {
 	Application.Quit();

@@ -2,12 +2,15 @@
 using System.Collections;
 
 public class EnemyManager : MonoBehaviour {
+	//public Portal portal;
 	public GameObject Enemy;
-	public GameObject Portal;
+	public GameObject Portals;
 	public GameObject Text;
 	public float SpawnTimer;
 	public float EnemySpawnCounter;
-	
+	public float LevelCounter;
+	public int num;
+
 	void Spawn() {
 		Vector3 newPosition = new Vector3(Random.insideUnitSphere.x * 50, transform.position.y, Random.insideUnitSphere.z * 50);
 		Instantiate(Enemy, newPosition, transform.rotation);
@@ -15,7 +18,11 @@ public class EnemyManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		LevelCounter = 1;
+		num = Random.Range (1, 10);
+		EnemySpawnCounter = LevelCounter * 5 * num;
 		StartCoroutine(countdown(EnemySpawnCounter));
+		Debug.Log (EnemySpawnCounter);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -24,7 +31,7 @@ public class EnemyManager : MonoBehaviour {
 		if (enemyCount <= 0 && EnemySpawnCounter <= 0)
 		{
 			Text.SetActive(true);
-			Portal.SetActive(true);
+			Portals.SetActive(true);
 		}
 	}
 
@@ -36,20 +43,5 @@ public class EnemyManager : MonoBehaviour {
 			yield return new WaitForSeconds(5.0f);
 			--time;
 		}
-
-		/*if (time <= 0){
-			//StartCoroutine(countdown(5));
-			yield return null;
-			if (EnemySpawnCounter > 0)
-				Spawn();
-		}
-		else
-		{
-			yield return new WaitForSeconds(1);
-			time--;
-			//Spawn();
-			print(time);
-			StartCoroutine(countdown(time));
-		}*/
 	}
 }

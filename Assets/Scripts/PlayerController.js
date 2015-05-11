@@ -3,6 +3,7 @@
 public var speed : float;
 public var rotSpeed : float;
 private var charCon : CharacterController;
+private var charYPos : float;
 
 function Awake(){
 
@@ -10,10 +11,14 @@ function Awake(){
 }
 
 function Start () {
+
+    charYPos = transform.position.y;
 }
 
 function FixedUpdate () {
 	
+    transform.position.y = charYPos;
+
 	if(Input.GetAxis("Vertical")){
 		
 		charCon.Move(Vector3(0,0,1) * Input.GetAxis("Vertical") * Time.deltaTime * speed);

@@ -15,3 +15,7 @@ EditorBuildSettings:
     path: Assets/Level2.unity
   - enabled: 1
     path: Assets/ScorchDemo.unity
+  - enabled: 1
+    path: Assets/GameOver.unity
+  - enabled: 1
+    path: Assets/NetworkTests.unity

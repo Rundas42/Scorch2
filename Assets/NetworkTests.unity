@@ -142,6 +142,10 @@ Prefab:
       propertyPath: orthographic size
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5495534, guid: 6ebc15d7ace22c346afd2dd20c0516f9, type: 2}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ebc15d7ace22c346afd2dd20c0516f9, type: 2}
   m_IsPrefabParent: 0
@@ -184,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765f36f7a345eef4cb7501041ca37d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1926441871}
 --- !u!1001 &741732734
 Prefab:
   m_ObjectHideFlags: 0
@@ -471,6 +476,11 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthBarLength: 0
+--- !u!20 &1926441871 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2085122, guid: 6ebc15d7ace22c346afd2dd20c0516f9,
+    type: 2}
+  m_PrefabInternal: {fileID: 124425404}
 --- !u!1001 &2112230432
 Prefab:
   m_ObjectHideFlags: 0

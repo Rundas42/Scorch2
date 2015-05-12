@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class Pause : MonoBehaviour {
-
+    public Camera mainCamera;
+    int Speed;
     bool paused = false;
 	// Update is called once per frame
 	void Update () 
@@ -35,12 +36,14 @@ public class Pause : MonoBehaviour {
     {
         if (Time.timeScale == 0f)
         {
+
             Time.timeScale = 1f;
             return (false);
         }
         else
         {
             Time.timeScale = 0f;
+           mainCamera.transform.position = Vector3.zero;
             return (true);
         }
     }
